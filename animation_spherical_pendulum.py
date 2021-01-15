@@ -83,14 +83,13 @@ screen = pygame.display.set_mode((w,h)) #setting the display
 screen.fill(WHITE) #painting the screen white
 trace = screen.copy() #making a new screen for drawing the trace
 
-is_tracing = True
+is_tracing = True #flag  for turning on/off the tracing
 
 pygame.display.update()
 clock = pygame.time.Clock() #for framerate locking
 
 
 #parameters
-
 m = 3.0
 l = 4.5
 g = 9.81
