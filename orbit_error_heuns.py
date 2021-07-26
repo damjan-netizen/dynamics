@@ -79,5 +79,5 @@ def plot_me():
     
     
     
-    
+print(x)
 plot_me()
