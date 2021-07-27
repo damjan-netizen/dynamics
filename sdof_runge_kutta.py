@@ -56,7 +56,7 @@ for t in time:
     U = 0.5*k*y[1]**2
 
     if t%1 <=0.01:
-        print 'Total Energy:', T+U
+        print '(Total Energy:', T+U)
     
     
 
@@ -71,8 +71,8 @@ plt.legend(['Displacement','Force'], loc='lower right')
 
 plt.show()
 
-print 'Critical Damping:', np.sqrt((-c**2+4*m*k)/(2.0 *m))
-print 'Natural Frequency: ', np.sqrt(k/m)
+print ('Critical Damping:', np.sqrt((-c**2+4*m*k)/(2.0 *m)))
+print ('Natural Frequency: ', np.sqrt(k/m))
 
 
 
