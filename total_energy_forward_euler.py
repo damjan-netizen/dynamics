@@ -42,6 +42,13 @@ def forward_euler(x, y, step_size, num_steps):
     return x, y
     
 
+def symplectic_euler(x, y,step_size, num_steps):
+    for i in range(num_steps):
+        x[i+1] = x[i] + step_size*y[i]
+        y[i+1] = v[i] + step_size*acceleration(x[i+1])
+        
+    return x, y
+
 def total_energy(x, v, step_size, num_steps):
     E = np.zeros(num_steps+1)
     for i in range(num_steps+1):
@@ -60,5 +67,8 @@ axes1.set_ylabel('Lateral distance in m')
 plt.axis('equal')
 axes2 = plt.subplot(212)
 plt.plot(energy)
-axes2.set_xlabel('Step number')
+axes2.set_xlabel('Step number\nusing forward Euler method')
 axes2.set_ylabel('Total energy in J')
+
+plt.figure(2)
+plt.plot(x[:,0], v[:,0])
